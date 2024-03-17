@@ -6,9 +6,10 @@ from django.http import HttpResponse
 
 
 # Главная страница
-def index(request):    
-    return HttpResponse('Главная страница')
+def index(request):
+    template = 'posts/index.html'
+    return render(request, template)
 
 
 def group_posts(request, slug):
-    return HttpResponse(f'ПОСТЫ ОТФИЛЬТРОВАННЫЕ ПО ГРУППАМ!!!!! {slug}') 
+    return HttpResponse(f'ПОСТЫ ОТФИЛЬТРОВАННЫЕ ПО ГРУППАМ!!!!! {slug}')
